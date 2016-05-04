@@ -1,0 +1,4 @@
+# Create Buttons
+    $self->{button} = Wx::Button->new($self, -1, "Button Label", wxDefaultPosition, wxDefaultSize);
+
+

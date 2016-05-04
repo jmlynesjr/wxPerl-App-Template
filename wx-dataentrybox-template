@@ -1,0 +1,4 @@
+# Create Data Entry Prompts and Boxes
+    $self->{label} = Wx::StaticText->new($self, -1, "Prompt Text", wxDefaultPosition, wxDefaultSize);
+    $self->{text} = Wx::TextCtrl->new($self, -1, "Default Value", wxDefaultPosition, wxDefaultSize);
+

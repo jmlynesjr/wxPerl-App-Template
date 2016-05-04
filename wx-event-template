@@ -1,0 +1,12 @@
+# Event Handler Template
+
+    Wx::Event::EVT_BUTTON($self, $button, sub {
+			  my ($self, $event) = @_;
+			  
+			  });
+
+    Wx::Event::EVT_TEXT($self, $text, sub {
+			my ($self, $event) = @_;
+			
+			});
+

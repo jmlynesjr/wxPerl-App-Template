@@ -1,0 +1,5 @@
+# Create a Radio Box
+    my $choices = [ "A", "B", "C", "D", "E", "F", "G", "H", "I"];
+    $self->{radiobox} = Wx::RadioBox->new($self, -1, "Radio Box Title", wxDefaultPosition, wxDefaultSize,
+                        $choices, 3, wxRA_SPECIFY_COLS);
+

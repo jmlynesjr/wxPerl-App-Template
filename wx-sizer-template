@@ -1,0 +1,56 @@
+# Define Sizer Structure - My "Standard" Layout
+# Assumes: One Main Sizer(Vertical)
+#          One Header Sizer(Horizontal)
+#	   One Body Sizer(Horizontal) containing
+#              Left Body Sizer(Vertical)
+#              Right Body Sizer(Vertical)
+#          Three Footer Sizers(horizontal)
+#
+
+# Create Sizers
+    my $mainSizer = Wx::BoxSizer->new(wxVERTICAL);
+    $self->SetSizer($mainSizer);
+
+    my $headerSizer = Wx::BoxSizer->new(wxHORIZONTAL);
+    my $bodySizer = Wx::BoxSizer->new(wxHORIZONTAL);
+    my $leftbodySizer = Wx::BoxSizer->new(wxVERTICAL);
+    my $rightbodySizer = Wx::BoxSizer->new(wxVERTICAL);
+    my $footer1Sizer = Wx::BoxSizer->new(wxHORIZONTAL);
+    my $footer2Sizer = Wx::BoxSizer->new(wxHORIZONTAL);
+    my $footer3Sizer = Wx::BoxSizer->new(wxHORIZONTAL);
+
+# Layout Main Sizer
+    $mainSizer->Add($headerSizer,0,0,0);
+    $mainSizer->AddSpacer(20);
+    $mainSizer->Add($bodySizer,0,0,0);
+    $mainSizer->AddSpacer(30);
+    $mainSizer->Add($footer1Sizer,0,0,0);
+    $mainSizer->AddSpacer(10);
+    $mainSizer->Add($footer2Sizer,0,0,0);
+    $mainSizer->AddSpacer(10);
+    $mainSizer->Add($footer3Sizer,0,0,0);
+
+# Layout Header Sizer
+    $headerSizer->AddSpacer(150);
+    $headerSizer->Add($self->{titletext},0,0,0);
+
+# Layout Body Sizer
+    $bodySizer->Add($leftbodySizer,0,0,0);
+    $bodySizer->AddSpacer(50);
+    $bodySizer->Add($rightbodySizer,0,0,0);
+
+# Layout Left and Right Body Sizers
+    $leftbodySizer->Add($self->{},0,0,0);
+    $rightbodySizer->Add($self->{},0,0,0);
+
+# Layout Footer Sizers
+    $footer1Sizer->Add($self->{},0,0,0);
+    $footer2Sizer->Add($self->{},0,0,0);
+    $footer3Sizer->Add($self->{},0,0,0);
+
+# Assign mainSizer to the Frame and trigger layout
+
+    $mainSizer->Fit($self);
+    $mainSizer->Layout();
+
+

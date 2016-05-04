@@ -1,0 +1,6 @@
+# Define Timer
+    $self->{timer} = Wx::Timer->new($self);
+
+# Start Timer
+    $self->{timer}->Start(1000);		# 1 sec period
+

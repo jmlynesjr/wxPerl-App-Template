@@ -1,0 +1,44 @@
+#! /usr/bin/perl
+
+# Name:			.pl
+# Author:		James M. Lynes, Jr.
+# Created:		January 13, 2015
+# Modified By:		James M. Lynes, Jr.
+# Last Modified:	May 4, 2016
+# Environment		Ubuntu 14.04LTS / perl v5.18.2 / wxPerl 3.0.1 / HP 15 Quad Core
+# Change Log:		1/13/2015 - Program Created
+#			1/6/2016  - Fixed comment error in Sizer section
+#			5/4/2016  - Fixed missing Add in Sizer section, Added messagebox and radiobox sections
+# Description:		
+# Notes:		
+#
+
+package main;
+use strict;
+use warnings;
+my $app = App->new();
+$app->MainLoop;
+
+package App;
+use strict;
+use warnings;
+use base 'Wx::App';
+sub OnInit {
+    my $frame = Frame->new();
+    $frame->Show(1);
+}
+
+package Frame;
+use strict;
+use warnings;
+use Wx qw(:everything);
+use base qw(Wx::Frame);
+use Data::Dumper;
+
+sub new {
+    my ($class, $parent) = @_;
+
+# Create Top Level Frame
+    my $self = $class->SUPER::new($parent, -1, "Frame Title", wxDefaultPosition, wxDefaultSize);
+
+

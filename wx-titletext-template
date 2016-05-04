@@ -1,0 +1,3 @@
+# Create Title Text
+    $self->{titletext} = Wx::StaticText->new($self, -1, "Title Text", wxDefaultPosition, wxDefaultSize);
+

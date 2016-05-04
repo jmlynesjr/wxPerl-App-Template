@@ -1,0 +1,3 @@
+# Create a Messsage/Error Box
+    Wx::MessageBox("Multiline\nError\nText", "Message Box Title", wxICON_ERROR, $self);
+
